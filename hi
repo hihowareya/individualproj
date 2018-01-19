@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   string ClassT = "";
+   cout << "Welcome to my VidjaGame";
+   cout << "Select your class";
+   cout << "Mage, Warrior, Rogue";
+   cin >> ClassT;
+   if(ClassT == "Mage" || "M")
+   return 0;
+}
