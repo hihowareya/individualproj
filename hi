@@ -3,11 +3,69 @@ using namespace std;
 
 int main() 
 {
-   string ClassT = "";
-   cout << "Welcome to my VidjaGame";
-   cout << "Select your class";
-   cout << "Mage, Warrior, Rogue";
-   cin >> ClassT;
-   if(ClassT == "Mage" || "M")
+   int atk = 0;
+   int def = 0;
+   int spd = 0;
+   int health = 0;
+   int atk2 = 0;
+   int def2 = 0;
+   int spd2 = 0;
+   int health2 = 0;
+   string Class1 = "";
+   string Class2 = "";
+   string P1gear = "";
+   string P2gear = "";
+   cout << "Welcome to my VidjaGame.";
+   cout << "Player 1 Select your class.";
+   cout << "Mage, Warrior, Rogue.";
+   cin >> Class1;
+   if(Class1 == ("Mage" || "M"))
+   {
+      atk = 10;
+      def = 12;
+      spd = 12;
+      health = 50;
+      cout << "Select your gear.";
+      cout << "Flame Wand, Mirror Cloak, accuracy ring";
+      cin >> P1gear;
+   }
+   if(Class1 == ("Warrior" || "W"))
+   {
+      atk = 12;
+      def = 15;
+      spd = 10;
+      health = 70;
+   }
+   if(Class1 == ("Rogue" || "R"))
+   {
+      atk = 15;
+      def = 9;
+      spd = 15;
+      health = 40;
+   }
+   
+   cout << "Player 2 Select your class";
+   cin >> Class2
+    if(Class2 == ("Mage" || "M"))
+   {
+      atk2 = 10;
+      def2 = 12;
+      spd2 = 12;
+      health2 = 50;
+   }
+   if(Class2 == ("Warrior" || "W"))
+   {
+      atk2 = 12;
+      def2 = 15;
+      spd2 = 10;
+      health2 = 70;
+   }
+   if(Class2 == ("Rogue" || "R"))
+   {
+      atk2 = 15;
+      def2 = 9;
+      spd2 = 15;
+      health2 = 40;
+   }
    return 0;
 }
