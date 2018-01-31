@@ -14,6 +14,10 @@ using namespace std;
 int main()
 
 {
+	int steal = 0;
+
+	int steal2 = 0;
+
 	int reflect = 0;
 
 	int reflect2 = 0;
@@ -132,6 +136,22 @@ int main()
 		{
 			reflect = 1;
 		}
+
+		else if (P1Gear == "Holy Armor")
+		{
+			def += 5;
+		}
+
+		else if (P1Gear == "Reinforced GreatSword")
+		{
+			atk += 8;
+		}
+
+		else
+		{
+			cout << "That is not a valid option." << endl;
+			return 0;
+		}
 	}
 
 	else if (Class1 == "Rogue")
@@ -149,9 +169,29 @@ int main()
 
 		cout << "Select your gear." << endl;
 
-		cout << "Cloak of Evasion, Poison daggers, Lifesteal Ring" << endl;
+		cout << "Cloak of Evasion, Poison Daggers, Lifesteal Ring" << endl;
 
 		getline(cin, P1Gear);
+
+		if (P1Gear == "Cloak of Evasion")
+		{
+			evade += 10;
+		}
+
+		else if (P1Gear == "Poison Daggers")
+		{
+			poisChance += 30;
+		}
+
+		else if (P1Gear == "Lifesteal Ring")
+		{
+			steal = 1;
+		}
+
+		else
+		{
+			cout << "That is not a valid choice." << endl;
+		}
 	}
 
 	else
@@ -181,6 +221,26 @@ int main()
 			cout << "Flame Wand, Enchanted Cloak, Accuracy Ring" << endl;
 
 			getline(cin, P2Gear);
+
+			if (P2Gear == "Flame Wand")
+			{
+				burnChance2 += 30;
+			}
+			else if (P2Gear == "Enchanted Cloak")
+			{
+				Res2 += 30;
+			}
+
+			else if (P2Gear == "Accuracy Ring")
+			{
+				accRing2 = 1;
+			}
+
+			else
+			{
+				cout << "That is not a valid option" << endl;
+				return 0;
+			}
 		}
 
 	if (Class2 == "Warrior")
@@ -200,6 +260,27 @@ int main()
 		cout << "Mirror Shield, Holy Armor, Reinforced GreatSword" << endl;
 
 		getline(cin, P2Gear);
+
+		if (P2Gear == "Mirror Shield")
+		{
+			reflect2 = 1;
+		}
+
+		else if (P2Gear == "Holy Armor")
+		{
+			def2 += 5;
+		}
+
+		else if (P2Gear == "Reinforced GreatSword")
+		{
+			atk2 += 8;
+		}
+
+		else
+		{
+			cout << "That is not a valid option." << endl;
+			return 0;
+		}
 	}
 
 	if (Class2 == "Rogue")
@@ -219,6 +300,26 @@ int main()
 		cout << "Cloak of Evasion, Poison Daggers, Lifesteal Ring" << endl;
 
 		getline(cin, P2Gear);
+
+		if (P2Gear == "Cloak of Evasion")
+		{
+			evade2 += 10;
+		}
+
+		else if (P2Gear == "Poison Daggers")
+		{
+			poisChance2 += 30;
+		}
+
+		else if (P2Gear == "Lifesteal Ring")
+		{
+			steal2 = 1;
+		}
+
+		else
+		{
+			cout << "That is not a valid choice." << endl;
+		}
 	}
 
 	else
@@ -229,4 +330,5 @@ int main()
 
 	return 0;
 }
+
 
