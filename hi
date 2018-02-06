@@ -14,6 +14,12 @@ using namespace std;
 int main()
 
 {
+	int dmg;
+
+	int atkType;
+
+	int atkType2;
+
 	int steal = 0;
 
 	int steal2 = 0;
@@ -59,8 +65,6 @@ int main()
 	int spd2 = 0;
 
 	int health2 = 0;
-
-	int acc2 = 0;
 
 	string Class1 = "";
 
@@ -328,7 +332,46 @@ int main()
 		return 0;
 	}
 
+	if (spd > spd2)
+	{
+		while(health > 0 && health2 > 0)
+		{
+			cout << "Player1 It is your turn" << endl;
+			cout << "Select your attack" << endl;
+			cout << "[1]Light Attack [2]Medium Attack [3]Heavy Attack" << endl;
+			cin >> (atkType);
+			switch (atkType)
+			{
+			case(1):
+			{
+				dmg = atk - def2;
+				health2 -= dmg;
+				break;
+			}
+			case(2):
+			{
+				dmg = (atk * 1.5) - def2;
+				break;
+			}
+			case(3):
+			{
+				dmg = (atk * 2) - def2;
+				break;
+			}
+			break;
+			}
+
+		}
+	}
+
+	else if (spd < spd2)
+	{
+
+	}
+	else
+	{
+
+	}
+
 	return 0;
 }
-
-
