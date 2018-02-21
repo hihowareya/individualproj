@@ -17,53 +17,37 @@ int main()
 	int dmg;
 
 	int atkType;
-
 	int atkType2;
 
 	int steal = 0;
-
 	int steal2 = 0;
 
 	int reflect = 0;
-
 	int reflect2 = 0;
 
 	int evade = 0;
-	
 	int evade2 = 0;
 
 	int Res = 0;
-
 	int Res2 = 0;
 
 	int poisChance = 0;
-
 	int poisChance2 = 0;
 
 	int burnChance = 0;
-
 	int burnChance2 = 0;
 
 	int accRing = 0;
-
 	int accRing2 = 0;
 
 	int atk = 0;
-
 	int def = 0;
-
 	int spd = 0;
-
 	int health = 0;
 
-	int acc = 0;
-
 	int atk2 = 0;
-
 	int def2 = 0;
-
 	int spd2 = 0;
-
 	int health2 = 0;
 
 	string Class1 = "";
@@ -336,27 +320,73 @@ int main()
 	{
 		while(health > 0 && health2 > 0)
 		{
+			int acc = 0;
 			cout << "Player1 It is your turn" << endl;
 			cout << "Select your attack" << endl;
 			cout << "[1]Light Attack [2]Medium Attack [3]Heavy Attack" << endl;
 			cin >> (atkType);
 			switch (atkType)
 			{
+
+			//light attack
 			case(1):
 			{
-				dmg = atk - def2;
-				health2 -= dmg;
-				break;
+				acc = 90;
+				if (accRing = 1)
+				{
+					acc += 30;
+				}
+				if (acc >= (int)(rand() % 100 + 1))
+				{
+					dmg = atk - def2;
+					health2 -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
 			}
+
+			//medium attack
 			case(2):
 			{
-				dmg = (atk * 1.5) - def2;
-				break;
+				acc = 70;
+				if (accRing = 1)
+				{
+					acc += 30;
+				}
+				if (acc >= (int)(rand() % 100 + 1))
+				{
+					dmg = (atk * 1.5) - def2;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
 			}
+
+			//heavy attack
 			case(3):
 			{
-				dmg = (atk * 2) - def2;
-				break;
+				acc = 50;
+				if (accRing = 1)
+				{
+					acc += 30;
+				}
+				if (acc >= (int)(rand() % 100 + 1))
+				{
+					dmg = (atk * 2) - def2;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
 			}
 			break;
 			}
