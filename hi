@@ -390,6 +390,34 @@ int main()
 			}
 			break;
 			}
+			cout << "Player 2 it is your turn." << endl;
+			cout << "Select your attack" << endl;
+			cout << "[1]Light Attack [2]Medium Attack [3]Heavy Attack" << endl;
+			cin >> (atkType);
+			switch (atkType)
+			{
+			//Light attack
+			case(1):
+			{
+				acc = 90;
+				if (accRing2 = 1)
+				{
+					acc += 30;
+				}
+				if (acc >= (int)(rand() % 100 + 1))
+				{
+					dmg = atk2 - def;
+					health -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
+			}
+			}
+			
 
 		}
 	}
