@@ -390,21 +390,24 @@ int main()
 			}
 			break;
 			}
-			cout << "Player 2 it is your turn." << endl;
+
+			int acc2 = 0;
+			cout << "Player2 It is your turn" << endl;
 			cout << "Select your attack" << endl;
 			cout << "[1]Light Attack [2]Medium Attack [3]Heavy Attack" << endl;
-			cin >> (atkType);
-			switch (atkType)
+			cin >> (atkType2);
+			switch (atkType2)
 			{
-			//Light attack
+
+				//light attack
 			case(1):
 			{
-				acc = 90;
+				acc2 = 90;
 				if (accRing2 = 1)
 				{
-					acc += 30;
+					acc2 += 30;
 				}
-				if (acc >= (int)(rand() % 100 + 1))
+				if (acc2 >= (int)(rand() % 100 + 1))
 				{
 					dmg = atk2 - def;
 					health -= dmg;
@@ -416,20 +419,218 @@ int main()
 					break;
 				}
 			}
+
+			//medium attack
+			case(2):
+			{
+				acc2 = 70;
+				if (accRing2 = 1)
+				{
+					acc2 += 30;
+				}
+				if (acc2 >= (int)(rand() % 100 + 1))
+				{
+					dmg = (atk2 * 1.5) - def;
+					health -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
 			}
-			
+
+			//heavy attack
+			case(3):
+			{
+				acc2 = 50;
+				if (accRing2 = 1)
+				{
+					acc2 += 30;
+				}
+				if (acc2 >= (int)(rand() % 100 + 1))
+				{
+					dmg = (atk2 * 2) - def;
+					health -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
+			}
+			break;
+			}
 
 		}
 	}
 
 	else if (spd < spd2)
 	{
+		while (health > 0 && health2 > 0)
+		{
+			int acc2 = 0;
+			cout << "Player2 It is your turn" << endl;
+			cout << "Select your attack" << endl;
+			cout << "[1]Light Attack [2]Medium Attack [3]Heavy Attack" << endl;
+			cin >> (atkType2);
+			switch (atkType2)
+			{
+
+				//light attack
+			case(1):
+			{
+				acc2 = 90;
+				if (accRing2 = 1)
+				{
+					acc2 += 30;
+				}
+				if (acc2 >= (int)(rand() % 100 + 1))
+				{
+					dmg = atk2 - def;
+					health -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
+			}
+
+			//medium attack
+			case(2):
+			{
+				acc2 = 70;
+				if (accRing2 = 1)
+				{
+					acc2 += 30;
+				}
+				if (acc2 >= (int)(rand() % 100 + 1))
+				{
+					dmg = (atk2 * 1.5) - def;
+					health -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
+			}
+
+			//heavy attack
+			case(3):
+			{
+				acc2 = 50;
+				if (accRing2 = 1)
+				{
+					acc2 += 30;
+				}
+				if (acc2 >= (int)(rand() % 100 + 1))
+				{
+					dmg = (atk2 * 2) - def;
+					health -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
+			}
+			break;
+			}
+			int acc = 0;
+			cout << "Player1 It is your turn" << endl;
+			cout << "Select your attack" << endl;
+			cout << "[1]Light Attack [2]Medium Attack [3]Heavy Attack" << endl;
+			cin >> (atkType);
+			switch (atkType)
+			{
+
+				//light attack
+			case(1):
+			{
+				acc = 90;
+				if (accRing = 1)
+				{
+					acc += 30;
+				}
+				if (acc >= (int)(rand() % 100 + 1))
+				{
+					dmg = atk - def2;
+					health2 -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
+			}
+
+			//medium attack
+			case(2):
+			{
+				acc = 70;
+				if (accRing = 1)
+				{
+					acc += 30;
+				}
+				if (acc >= (int)(rand() % 100 + 1))
+				{
+					dmg = (atk * 1.5) - def2;
+					health2 -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
+			}
+
+			//heavy attack
+			case(3):
+			{
+				acc = 50;
+				if (accRing = 1)
+				{
+					acc += 30;
+				}
+				if (acc >= (int)(rand() % 100 + 1))
+				{
+					dmg = (atk * 2) - def2;
+					health2 -= dmg;
+					break;
+				}
+				else
+				{
+					cout << "You missed" << endl;
+					break;
+				}
+			}
+			break;
+			}
+
+		}
 
 	}
 	else
 	{
+		if (50 >= (int)(rand() % 100 + 1))
+		{
 
+		}
+		else
+		{
+
+		}
 	}
 
 	return 0;
 }
+
